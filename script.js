@@ -1,4 +1,5 @@
 const quoteDiv = document.querySelector("#quote-div");
+const btn = document.querySelector("#button");
 
 function getQuotes() {
   fetch("https://api.kanye.rest/")
@@ -22,5 +23,11 @@ function showQuotes(data) {
   h1.append(quote);
   quoteDiv.appendChild(h1);
 }
+
+function reloadQuote() {
+  location.reload();
+}
+
+btn.addEventListener("click", reloadQuote);
 
 getQuotes();
