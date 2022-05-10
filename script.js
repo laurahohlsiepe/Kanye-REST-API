@@ -22,6 +22,8 @@ function showQuotes(data) {
   // append
   h2.append(quote);
   quoteDiv.appendChild(h2);
+
+  h2.id = "h2";
 }
 
 function reloadQuote() {
